@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 切换控件 -->
+    <declare-styleable name="AnimSwitch">
+        <!-- 动画时长 -->
+        <attr name="duration" format="integer" />
+        <!-- 滑块颜色 -->
+        <attr name="thumbColor" format="color" />
+        <!-- 背景颜色 -->
+        <attr name="switchBackgroundColor" format="color" />
+    </declare-styleable>
+</resources>
