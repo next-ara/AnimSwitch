@@ -15,7 +15,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.next.view.switch2'
                 artifactId = 'AnimSwitch'
-                version = "1.0.0"
+                version = "1.0.1"
             }
         }
     }
@@ -45,7 +45,7 @@ android {
 
 dependencies {
     //圆角控件集
-    implementation 'com.github.next-ara:RoundView:1.0.0'
+    implementation 'com.github.next-ara:RoundView:1.0.3'
 
     implementation 'com.google.android.material:material:1.8.0'
 }
