@@ -212,13 +212,9 @@ public class AnimSwitch extends RoundRelativeLayout {
             //设置滑块布局
             this.thumbView.setLayoutParams(layoutParams);
             //设置滑块半径
-            this.thumbView.setRadius(thumbRadius);
-            //设置关闭滑块圆角半径偏移量
-            this.thumbView.setOffset(false);
+            this.thumbView.setRadius(thumbRadius, false);
             //设置布局半径
-            this.setRadius((float) (height / 2.0));
-            //设置关闭布局圆角半径偏移量
-            this.setOffset(false);
+            this.setRadius((float) (height / 2.0), false);
         });
     }
 
