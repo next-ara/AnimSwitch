@@ -9,6 +9,7 @@ import android.widget.RelativeLayout;
 
 import androidx.annotation.ColorInt;
 import androidx.annotation.Nullable;
+import androidx.core.view.animation.PathInterpolatorCompat;
 
 import com.next.view.round.RoundImageView;
 import com.next.view.round.RoundRelativeLayout;
@@ -342,7 +343,7 @@ public class AnimSwitch extends RoundRelativeLayout {
     private void setAnimThumbLeftMarginChange(float oldLeftMargin, float newLeftMargin, long duration) {
         ValueAnimator animator = ValueAnimator.ofFloat(oldLeftMargin, newLeftMargin);
         animator.setDuration(duration);
-        animator.setInterpolator(new EaseCubicInterpolator(0f, 1f, 0f, 1f));
+        animator.setInterpolator(PathInterpolatorCompat.create(0f, 1f, 0f, 1f));
         animator.addUpdateListener(animation -> {
             //设置滑块左部间隔
             this.setLeftMargin((float) animation.getAnimatedValue());
@@ -360,7 +361,7 @@ public class AnimSwitch extends RoundRelativeLayout {
     private void setAnimBackgroundAlphaChange(float oldAlpha, float newAlpha, long duration) {
         ValueAnimator animator = ValueAnimator.ofFloat(oldAlpha, newAlpha);
         animator.setDuration(duration);
-        animator.setInterpolator(new EaseCubicInterpolator(0f, 1f, 0f, 1f));
+        animator.setInterpolator(PathInterpolatorCompat.create(0f, 1f, 0f, 1f));
         animator.addUpdateListener(animation -> {
             this.backgroundView.setAlpha((float) animation.getAnimatedValue());
         });
